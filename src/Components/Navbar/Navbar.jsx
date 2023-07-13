@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Navbar.module.css'
 import { Link, Route, useNavigate } from 'react-router-dom'
+import logo from './logo.png'
 
 export default function Navbar() {
   // const nav = useNavigate();
@@ -12,16 +13,14 @@ export default function Navbar() {
   return (
     <>
       <div className={styles.navbar}>
-       {/* <Route> */}
+        <img alt="Road Runner Logo" src={logo} width="140px" height="90px" />
+        <div>
+        {/* <img src="https://themewagon.github.io/carbook/images/bg_1.jpg" alt="" /> */}
+        </div>
 
-        <img alt="Road Runner Logo" src="https://raw.githubusercontent.com/jeff-lent/roadrunnercars/main/logo.png" width="140px" height="90px" 
-        // onClick={handleNavigate}
-        />
-
-       {/* </Route> */}
-
-        <h1>Road Runner </h1>
+       
       </div>
+
     </>
   )
 }

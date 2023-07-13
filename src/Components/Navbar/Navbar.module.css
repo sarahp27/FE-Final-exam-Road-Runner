@@ -1,8 +1,9 @@
 .navbar{
   padding: 5px;
-  background: #cda44c;
+  background: white;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   
 }
 

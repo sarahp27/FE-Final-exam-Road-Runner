@@ -1,10 +1,10 @@
-check {
+/* check {
     margin: 50px;
 
-}
+} */
 
 .formGroup {
-    padding: 10px;
+    /* padding: 10px; */
    
 }
 
@@ -17,6 +17,11 @@ check {
 
 }
 
+.main{
+    /* background: #dde3e6; */
+    padding: 10px;
+}
+
 .btns{
     display: flex;
     flex-direction: row;
@@ -26,4 +31,42 @@ check {
 
 .form{
     margin: 10px 30px 10px 30px;
+     
+}
+
+.payment{
+    border-radius: 10px;
+    margin-top: 50px;
+    background: #dfcece;
+    padding: 10px;
+    
+}
+/* 
+.basicForm {
+  display: flex;
+  flex-direction: column;
+  
+
+} */
+button{
+    /* padding: 10px; */
+    width: 200px;
+    border: none;
+    border-radius:  10px;
+    margin: 5px;
+
+}
+
+.formImg{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    padding-left: 20px;
+    /* align-items: center; */
+}
+
+.image{
+    padding: 10px;
+    margin-left: 80px;
+    box-shadow: 10px 8px 8px 8px #888888
 }

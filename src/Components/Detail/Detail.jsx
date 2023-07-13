@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useLocation, useNavigate } from 'react-router-dom';
+import styles from './Detail.module.css'
 
 export const Detail = () => {
 
@@ -8,41 +9,41 @@ export const Detail = () => {
 
     const car = location.state
 
-    console.log(location.state)
+    console.log(car)
 
     const navigate = useNavigate();
     const handleNavigate = () => {
-        navigate(`/rentCar/${car.id}`, { state: car })
+        navigate(`/rentCar/${car.id}`)
     }
 
 
     return (
-        <div className="detailCard">
+        <div className={styles.detailCard}>
 
-            <div className="styles.details" >
-                <h2>{car.name}</h2>
-                <img src="https://raw.githubusercontent.com/jeff-lent/roadrunnercars/main/PorscheMissionX.png" alt='name' width="500px" height="500px" />
-                {/* <p>
-                    <b>Name: </b>
-                    {car.name}
+            <div class="col-md-6 mb-md-0 p-md-4" className={styles.details} >
+                <img src={car.image} alt='name' width="500px" height="500px" />
+</div>
+                <div class="col-md-6 mb-md-0 p-md-4" className={styles.left}>
+                    
+                    <h2>{car.name}</h2>
+                    <p>
+                        <b>Description:</b>
+                        {car.longDesc}
+                    </p>
 
-                </p> */}
-                <p>
-                    <b>Description:</b>
-                    {car.longDesc}
-                </p>
-
-                <p>Daily Rental Price:
-                    <b>{car.price} Rs</b>
-                </p>
-
-                <Link to={`/rentCar/${car.id}`}>
+                    <p>Daily Rental Price:
+                        <b>{car.price} Rs</b>
+                    </p>
                     <button
                         onClick={handleNavigate}
                     >Rent Me Now</button>
-                </Link>
+
+
+                </div>
             </div>
-        </div>
+
+
+        // </div>
 
     )
 }

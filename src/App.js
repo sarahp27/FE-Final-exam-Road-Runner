@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Homepage } from './Routes/Homepage';
-import { Details } from './Routes/Details';
-import { RentalForm } from './Routes/RentalForm';
+import { Card } from './Components/Cards/Card.jsx';
+
 import Navbar from './Components/Navbar/Navbar';
-import { Thanks } from './Routes/Thanks';
+import { Thanks } from './Components/Thanks/Thanks.jsx';
+import { Detail } from './Components/Detail/Detail.jsx';
+import { Form } from './Components/Form/Form.jsx';
 
 function App() {
   return (
@@ -12,9 +13,9 @@ function App() {
         <BrowserRouter>
           <Routes>
           
-            <Route path='/' element={<Homepage/>}/>
-            <Route path='/detail/:id' element={<Details/>}/>
-            <Route path='/rentCar/:id' element={<RentalForm/>}/>
+            <Route path='/' element={<Card/>}/>
+            <Route path='/detail/:id' element={<Detail/>}/>
+            <Route path='/rentCar/:id' element={<Form/>}/>
             <Route path='/thanks' element={<Thanks/>}></Route> 
 
           </Routes>
