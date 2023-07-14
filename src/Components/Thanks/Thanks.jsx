@@ -20,7 +20,7 @@ export const Thanks = () => {
 
         
     
-     <h1 style={{display:"flex",flexDirection: "column", alignItems:"center"}}> Thank You for Choosing Us</h1>
+     <h1 style={{display:"flex",flexDirection: "column", alignItems:"center"}} test-id="th"> Thank You for Choosing Us</h1>
     
     
      <button style={{color: "white", backgroundColor:"black", display:"flex", flexDirection:"column", alignItems:"center"}} onClick={handleNavigate}> Start Over</button>

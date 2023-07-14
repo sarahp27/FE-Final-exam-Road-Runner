@@ -278,8 +278,8 @@ export const Form = () => {
     <>
       <div className={styles.main}>
 
-        < div className={styles.form}>
-          <h1 style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        < div data-testid="confirmation" className={styles.form}>
+          <h1  style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
             Confirm your Car
           </h1>
 
@@ -388,9 +388,9 @@ export const Form = () => {
               </div>
               <div className={styles.btns}>
 
-                  <button onClick={handleStorage} > Choose a different car</button>
+                  <button name="car" onClick={handleStorage} > Choose a different car</button>
                 {/* <Link to='/thanks'> */}
-                <button type='submit' >Checkout</button>
+                <button name ="checkout"type='submit' >Checkout</button>
                 {/* </Link> */}
 
               </div>
