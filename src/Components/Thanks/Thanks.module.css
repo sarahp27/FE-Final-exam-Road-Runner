@@ -3,21 +3,15 @@
     /* color: white; */
     /* display: flex; */
     /* flex-direction: row-reverse; */
-    justify-content: right;
-   
-}
-
-.thanks img {
-    /* display: flex; */
-    /* flex-direction: row-reverse; */
-    justify-content: right;
-
-    /* flex-wrap: wrap; */
-    /* align-items:; */
-}
-
-button{
     display: flex;
     flex-direction: column;
     align-items: center;
+   
 }
+
+
+/* button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */

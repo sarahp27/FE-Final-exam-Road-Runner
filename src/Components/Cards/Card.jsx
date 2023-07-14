@@ -34,7 +34,7 @@ export const Card = () => {
 
                 {car.map((car) => (
                     <div class="card" className={styles.cards}>
-                        <img className={styles.cardImg} src={car.image} />
+                        <img className={styles.cardImg} src={car.image} alt={car.name}/>
                         <div className={styles.desc}>
                         <h2 onClick={() => handleNavigate(car)} >{car.name}</h2>
                       

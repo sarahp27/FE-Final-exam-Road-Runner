@@ -15,15 +15,16 @@ export const Thanks = () => {
   return (
     <>
     <div>
+    <img src={thanks} alt="Thank You " width="800px" height="600"/>
     <div  className={styles.thanks}  >
 
         
-     <img src={thanks} width="800px" height="600"/>
+    
      <h1 style={{display:"flex",flexDirection: "column", alignItems:"center"}}> Thank You for Choosing Us</h1>
-    </div>
+    
     
      <button style={{color: "white", backgroundColor:"black", display:"flex", flexDirection:"column", alignItems:"center"}} onClick={handleNavigate}> Start Over</button>
-
+     </div>
     </div>
     
    

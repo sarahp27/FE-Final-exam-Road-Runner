@@ -2,7 +2,7 @@
     /* padding: 20px; */
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     /* align-items: center; */
     /* margin: 90px; */
     /* background: #928c8c; */
@@ -17,11 +17,18 @@
     border-radius: 30px;
 }
 
-details{
-    display: flex;
-    flex-direction: row;
+.details{
+    /* display: flex; */
+    /* flex-direction: row; */
+    box-shadow: 8px 8px 10px 10px #8888;
+    padding: 20px;
+    margin: 40px;
 }
 
-btn{
+button{
     border: none;
+    color: white;
+    background-color: black;
+    padding:5px;
+   
 }

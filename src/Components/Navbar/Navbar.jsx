@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <>
       <div className={styles.navbar}>
-        <img alt="Road Runner Logo" src={logo} width="140px" height="90px" />
+        <img test-id="logo-img" alt="Road Runner Logo" src={logo} width="140px" height="90px" />
         <div>
         {/* <img src="https://themewagon.github.io/carbook/images/bg_1.jpg" alt="" /> */}
         </div>

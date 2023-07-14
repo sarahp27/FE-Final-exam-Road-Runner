@@ -52,6 +52,22 @@ export const Form = () => {
 
   });
 
+  useEffect(()=>{
+    let storageData = localStorage.getItem("getStoredData");
+      if(storageData){
+      storageData=JSON.parse(storageData);
+      
+        setName(storageData?.name );
+        setAddress(storageData?.address);
+        setphoneNumber(storageData?.phoneNumber);
+        setdriverLicense(storageData?.driverLicense);
+        setpickupTime(storageData?.pickupTime);
+        setdropoffTime(storageData?.dropoffTime);
+        console.log("data")
+      }
+  },[])
+
+
   useEffect(() => {
 
 
@@ -67,31 +83,25 @@ export const Form = () => {
         fetch(`http://localhost:8081/cars/get/${id}`)
           .then((data) => data.json())
           .then((data) => {
-
-            let storageData = localStorage.getItem("getStoredData");
-            if(storageData?.length>0){
-            storageData=JSON.parse(storageData);
-            
-              setName(storageData?.name );
-              setAddress(storageData?.address);
-              setphoneNumber(storageData?.phoneNumber);
-              setdriverLicense(storageData?.driverLicense);
-              setpickupTime(storageData?.pickupTime);
-              setdropoffTime(storageData?.dropoffTime);
-              console.log("data")
-            }
-
-
-              
-            
-             
-
-
-            // console.log(data);
             const calculatedPrice1 = data.price;
             setPrice(calculatedPrice1);
             const calculatedPrice = (calculatedPrice1 * daysCount);
             setTotalPrice(calculatedPrice);
+
+            // let storageData = localStorage.getItem("getStoredData");
+            // if(storageData.length>0){
+            // storageData=JSON.parse(storageData);
+            
+            //   setName(storageData?.name );
+            //   setAddress(storageData?.address);
+            //   setphoneNumber(storageData?.phoneNumber);
+            //   setdriverLicense(storageData?.driverLicense);
+            //   setpickupTime(storageData?.pickupTime);
+            //   setdropoffTime(storageData?.dropoffTime);
+            //   console.log("data")
+            // }
+            // console.log(data);
+            
 
             if (insurance === true) {
               const insuredPricewithTotal = calculatedPrice + (daysCount * 15000);
@@ -326,7 +336,7 @@ export const Form = () => {
                   <div
                     //  class="col-md-6"
                     className={styles.image}>
-                    <img src={car.image} width="500px" />
+                    <img src={car.image} alt= {car.name } width="500px" />
                     <h2>{car.name}</h2>
 
                   </div>
